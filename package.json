@@ -1,0 +1,22 @@
+{
+  "name": "comet",
+  "version": "0.0.1",
+  "description": "comet cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "com": "index.js"
+  },
+  "keywords": [
+    "comet",
+    "comet-cli"
+  ],
+  "author": "me@goje87.com",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^0.30.0",
+    "mkdirp": "^0.5.1"
+  }
+}
