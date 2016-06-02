@@ -4,7 +4,7 @@ const projectConfig = require(`projectConfig`);
 const _ = require('lodash');
 const cordova = window ? window.cordova : undefined;
 const doc = window.document;
-const isMobileApp = typeof(cordova) !== undefined;
+const isMobileApp = typeof(cordova) !== 'undefined';
 const statuses = {
   LOADING: 'loading',
   LOADED: 'loaded'

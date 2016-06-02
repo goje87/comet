@@ -4,22 +4,17 @@
 const program = require('commander');
 const utils = require('./utils');
 
-var platform;
-
 program
-  .arguments('<platform>')
-  .action(function(platformValue) {
-    platform = platformValue;
-  })
   .option('-e, --env [environment]', 'Run as a specific environment', 'dev')
   .parse(process.argv);
 
+var platform = program.args[0];
 var envFlag = program.env ? `--env ${program.env}` : '';
 
-utils.run(`com build ${platform} ${envFlag}`)
+utils.run(`comet build ${envFlag}`)
   .then(function() {
-    utils.run(`cordova run ${platform}`)
+    utils.run(`cordova run ${platform}`);
   })
   .catch(function(err) {
-    throw err;
+    console.error(err);
   });

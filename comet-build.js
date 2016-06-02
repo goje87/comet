@@ -7,13 +7,7 @@ const browserify = require('browserify');
 const fs = require('fs-extra');
 const config = require(`${__dirname}/config.json`);
 
-var platform;
-
 program
-  .arguments('<platform>')
-  .action(function(platformValue) {
-    platform = platformValue;
-  })
   .option('-e, --env [environment]', 'Build for a specific environment', 'dev')
   .parse(process.argv);
 
