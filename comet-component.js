@@ -13,8 +13,16 @@ const
   action = program.args[0],
   componentName = program.args[1],
   actions = {
-    'create': () => {
+    create() {
       yo.run(['comet:component', componentName])
+    },
+
+    add() {
+      utils.run(`bower install --save ${componentName}`)
+    },
+
+    remove() {
+      utils.run(`bower uninstall --save ${componentName}`)
     }
   }
 
