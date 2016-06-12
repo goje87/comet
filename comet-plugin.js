@@ -10,7 +10,7 @@ program
 const action = program.args[0]
 const plugin = program.args[1]
 
-utils.run(`cordova plugin ${action} ${plugin}`)
+utils.run(`cordova plugin ${action} ${plugin} --save`)
   .catch((err) => {
     throw new Error(err)
   })

@@ -4,7 +4,7 @@ const projectConfig = require(`projectConfig`);
 const _ = require('lodash');
 const cordova = window ? window.cordova : undefined;
 const doc = window.document;
-const isMobileApp = typeof(cordova) !== 'undefined';
+const isMobileApp = !!(typeof(cordova) !== 'undefined' && cordova);
 const statuses = {
   LOADING: 'loading',
   LOADED: 'loaded'
@@ -24,6 +24,8 @@ function values(obj) {
 
 function initialize() {
   setStatus(statuses.LOADING);
+
+  window.config = projectConfig;
 
   setContentSecurityPolicy();
   return new Promise(function(resolve, reject) {
