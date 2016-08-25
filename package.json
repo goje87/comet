@@ -19,6 +19,7 @@
     "commander": "^2.9.0",
     "fs-extra": "^0.30.0",
     "generator-comet": "^0.1.0",
+    "lodash": "^4.15.0",
     "mkdirp": "^0.5.1",
     "yeoman-environment": "^1.6.1"
   }
